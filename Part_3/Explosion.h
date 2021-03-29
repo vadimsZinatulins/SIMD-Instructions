@@ -22,7 +22,7 @@ private:
 	float m_r2;
 
 	// Explosion's damage
-	float m_damage;;
+	float m_damage;
 };
 
 void explosionUpdate(Explosion *explosion, Entity *entities, int numEntities);

@@ -43,7 +43,7 @@ void explosionUpdate(Explosion *explosion, Entity *entities, int numEntities)
 	{
 		// Calculate distantes from entities to explosion
 		__m128 mmDxs = _mm_sub_ps(mmExplosionX, _mm_set_ps(entities[i + 0].m_x, entities[i + 1].m_x, entities[i + 2].m_x, entities[i + 3].m_x));
-		__m128 mmDys = _mm_sub_ps(mmExplosionX, _mm_set_ps(entities[i + 0].m_y, entities[i + 1].m_y, entities[i + 2].m_y, entities[i + 3].m_y));
+		__m128 mmDys = _mm_sub_ps(mmExplosionY, _mm_set_ps(entities[i + 0].m_y, entities[i + 1].m_y, entities[i + 2].m_y, entities[i + 3].m_y));
 		__m128 mmDistances = _mm_sqrt_ps(_mm_add_ps(_mm_mul_ps(mmDxs, mmDxs), _mm_mul_ps(mmDys, mmDys)));
 
 		// Calculate damage factor
